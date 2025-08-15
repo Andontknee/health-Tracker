@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginBottom="8dp">
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="October 26, 2025"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Sleep Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+            <TextView android:text="Sleep:" android:layout_width="60dp" android:layout_height="wrap_content"/>
+            <ProgressBar
+                android:id="@+id/progressBarSleep"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/textViewSleepValue" android:text="8.0 Hrs" android:layout_marginStart="8dp" android:layout_width="60dp" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewSleepStatus" android:text="Good" android:textStyle="bold" android:layout_marginStart="8dp" android:layout_width="60dp" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Water Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <TextView android:text="Water:" android:layout_width="60dp" android:layout_height="wrap_content"/>
+            <ProgressBar
+                android:id="@+id/progressBarWater"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"/>
+            <TextView android:id="@+id/textViewWaterValue" android:text="2.5 L" android:layout_marginStart="8dp" android:layout_width="60dp" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/textViewWaterStatus" android:text="Average" android:textStyle="bold" android:layout_marginStart="8dp" android:layout_width="60dp" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- User Note -->
+        <TextView
+            android:id="@+id/textViewNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textStyle="italic"
+            android:background="#F3F3F3"
+            android:padding="8dp"
+            android:text="Note: Today I tried to sleep at least 6 hours." />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
